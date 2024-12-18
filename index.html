@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himansu Kumar | CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabcontent.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007acc;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Himansu Kumar, PhD</h1>
+        <p>Research Scientist | Bioinformatics & Computational Biology</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="openTab(event, 'experience')">Experience</a>
+        <a href="#" onclick="openTab(event, 'publications')">Publications</a>
+        <a href="#" onclick="openTab(event, 'education')">Education</a>
+        <a href="#" onclick="openTab(event, 'skills')">Skills</a>
+        <a href="#" onclick="openTab(event, 'contact')">Contact</a>
+    </nav>
+
+    <!-- Experience Tab -->
+    <div id="experience" class="tabcontent active">
+        <h2>Research Experience</h2>
+        <ul>
+            <li><strong>Research Scientist</strong> - University of Texas Health Science Center at Houston, USA (Nov 2023 - Present)</li>
+            <li><strong>Post-doctoral Fellow</strong> - University of Texas Health Science Center at Houston, USA (Apr 2021 - Oct 2023)</li>
+            <li><strong>Post-doctoral Fellow</strong> - Mount Sinai, New York (Nov 2020 - Apr 2021)</li>
+            <li><strong>Post-doctoral Fellow</strong> - National Institute of Animal Science, South Korea (Mar 2018 - Oct 2020)</li>
+            <li><strong>Senior Scientist</strong> - Qtlomics Technologies, Bangalore, India (Jul 2017 - Mar 2018)</li>
+        </ul>
+    </div>
+
+    <!-- Publications Tab -->
+    <div id="publications" class="tabcontent">
+        <h2>Selected Publications</h2>
+        <ul>
+            <li>Kumar, Himansu, et al. "FusionNeoAntigen: a resource of fusion gene-specific neoantigens." Nucleic Acids Research 52.D1 (2024).</li>
+            <li>Kumar, H., Tang, L. Y., Yang, C., & Kim, P. "FusionPDB: a knowledgebase of human fusion proteins." Nucleic Acids Research 52.D1 (2024).</li>
+            <li>Kim, P., Kumar, H., Yang, C., et al. "FusionGDB 2.0: fusion gene annotation update aided by deep learning." Nucleic Acids Research.</li>
+            <li>Yang, Chengyuan, Himansu Kumar, and Pora Kim. "FusionNW, a potential clinical impact assessment of kinases in pan-cancer fusion gene network." Briefings in Bioinformatics (2024).</li>
+        </ul>
+    </div>
+
+    <!-- Education Tab -->
+    <div id="education" class="tabcontent">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Ph.D. in Bioinformatics</strong> - Indian Institute of Information Technology Allahabad, India (2017)</li>
+            <li><strong>M.Tech in Bioinformatics</strong> - Indian Institute of Information Technology Allahabad, India (2011)</li>
+            <li><strong>B.Tech in Biotechnology</strong> - Allahabad Agriculture Institute (2009)</li>
+        </ul>
+    </div>
+
+    <!-- Skills Tab -->
+    <div id="skills" class="tabcontent">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming: Python, R, Linux/Unix</li>
+            <li>Bioinformatics: WGS, RNA-Seq, Structural Bioinformatics</li>
+            <li>Machine Learning and AI-based modeling</li>
+            <li>Tools: AlphaFold, GROMACS, ClustalW, and BLAST</li>
+        </ul>
+    </div>
+
+    <!-- Contact Tab -->
+    <div id="contact" class="tabcontent">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:himanshu.genetics@gmail.com">himanshu.genetics@gmail.com</a></p>
+        <p>Phone: +1 6462582276</p>
+    </div>
+
+    <footer>
+        &copy; 2024 Himansu Kumar | All Rights Reserved
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, navLinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => link.classList.remove("active"));
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
